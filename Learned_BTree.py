@@ -128,7 +128,7 @@ def train_index(threshold, use_threshold, distribution, path):
         return
     stage_set = parameter.stage_set
     # set number of models for second stage (1 model deal with 10000 records)
-    stage_set[1] = int(round(data.shape[0] / 10000))
+    #stage_set[1] = int(round(data.shape[0] / 10000))
     core_set = parameter.core_set
     train_step_set = parameter.train_step_set
     batch_size_set = parameter.batch_size_set
