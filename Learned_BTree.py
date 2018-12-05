@@ -198,7 +198,7 @@ def train_index(threshold, use_threshold, distribution, path):
             result_stage2[ind] = tmp_result
         else:
             result_stage2[ind] = {"weights": trained_index[1][ind].weights,
-                                  "bias": trained_index[1][ind].weights}
+                                  "bias": trained_index[1][ind].bias}
     result = [{"stage": 1, "parameters": result_stage1}, {"stage": 2, "parameters": result_stage2}]
 
     with open("model/" + pathString[distribution] + "/full_train/NN/" + str(TOTAL_NUMBER) + ".json", "wb") as jsonFile:
